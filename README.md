@@ -1,6 +1,8 @@
-# Drowsiness Detection Model
+# Real-Time Drowsiness Detection for Drivers
 
-Welcome to the Drowsiness Detection Model project! This project utilizes computer vision techniques and machine learning to detect drowsiness in individuals. It aims to enhance safety by alerting individuals when they exhibit signs of drowsiness, especially in situations such as driving or operating machinery.
+Welcome to the Drowsiness Detection Model project! This project leverages computer vision and machine learning techniques to develop a real-time drowsiness detection application for drivers. Utilizing a Convolutional Neural Network (CNN) model based on the InceptionV3 architecture, the application monitors the movement of the driver’s eyes through a live video stream to identify signs of drowsiness. When fatigue is detected, an audible alarm is triggered to alert the driver.
+
+The Drowsiness Detection Model aims to enhance safety by promptly warning individuals when they exhibit signs of drowsiness, especially in critical situations such as driving or operating heavy machinery.
 
 ## Requirements
 
@@ -27,7 +29,21 @@ To run the Drowsiness Detection Model project, you need to have the following so
 
 6. Follow the instructions provided by the application to use the webcam for video capture and detect drowsiness.
 
-## Output Examples
+## Harnessing Computer Vision in Real-Time Monitoring
+
+This real-time drowsiness detection project combines computer vision concepts and OpenCV to create an intelligent application capable of monitoring a driver’s alertness state. Here’s how these technologies mix in the project:
+
+**Computer Vision:** The project employs computer vision techniques to analyze the video stream captured by the camera. By focusing on the detection of eyes and faces, we can determine whether the driver is drowsy or alert. Computer vision enables the transformation of raw visual data into actionable insights.
+
+**OpenCV:** OpenCV, or Open Source Computer Vision Library, is the main library used in this project for image processing and object detection. Thanks to its robust features, OpenCV facilitates:
+
+- **Video Capture:** Accessing the camera to obtain a real-time video stream.
+- **Face and Eye Detection:** Using cascade classifiers to quickly identify faces and eyes in each frame.
+- **Image Processing:** Applying transformations such as grayscale conversion and resizing to prepare images for analysis.
+- **Display:** Visualizing the video stream with annotations that indicate the state of the driver’s eyes.
+
+**Deep Learning Integration:** By combining OpenCV with a deep learning model (InceptionV3), the project leverages the strengths of both technologies. OpenCV provides the necessary tools for real-time image processing, while the deep learning model makes predictions about the driver’s eye state. This combination allows for accurate and efficient drowsiness detection.
+
 
 ### Eyes Closed
 
@@ -41,16 +57,16 @@ When the model detects open eyes, it does not generate an alert. Here is an exam
 
 ![Eyes Open](images/open_eyes.png)
 
-## Customization
+## Dataset
 
-You can customize the Drowsiness Detection Model according to your requirements. Here are a few suggestions:
+For the development of this project, we used the Drowsiness Dataset provided by Dheeraj Perumandla on Kaggle. This dataset includes images of drivers in various scenarios, making it an excellent choice for training a drowsiness detection model. The main characteristics of the dataset include:
 
-- **User Interface**: The Streamlit application provides a basic user interface. You can enhance and customize the interface by modifying the `app.py` file. You can add additional features, buttons, or instructions to make the user experience more interactive.
+- **Ethnic Diversity**: The images come from different ethnic groups, allowing the model to be more general and effective in real-world situations.
 
-- **Integration**: The Drowsiness Detection Model can be integrated into other applications or systems. You can extract the relevant code and integrate it into your own projects, such as a driver assistance system or a monitoring application.
+- **Varied Lighting Conditions**: The images were captured under different lighting conditions, providing robustness to the model against environmental variations.
 
+- **Varied Facial Expressions**: The dataset includes various facial expressions, helping the model learn to recognize signs of fatigue amidst other emotions.
+
+- **Varying View Directions**: The images present drivers from different angles, improving the model's ability to detect signs of drowsiness regardless of camera angle.
 ## Contributing
-
-If you'd like to contribute to the Drowsiness Detection Model project, you can fork the repository, make improvements or add new features, and submit a pull request.
-
-Please ensure that your code follows the project's coding style and conventions. Additionally, include appropriate tests and update the documentation if necessary.
+BEN MADANE khadija & EL BARKI Basma
