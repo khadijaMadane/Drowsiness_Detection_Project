@@ -68,5 +68,9 @@ For the development of this project, we used the Drowsiness Dataset provided by 
 - **Varied Facial Expressions**: The dataset includes various facial expressions, helping the model learn to recognize signs of fatigue amidst other emotions.
 
 - **Varying View Directions**: The images present drivers from different angles, improving the model's ability to detect signs of drowsiness regardless of camera angle.
+
+## Result
+![Eyes Open](Image/resultat.jpeg)
+
 ## Contributing
 BEN MADANE khadija & EL BARKI Basma
