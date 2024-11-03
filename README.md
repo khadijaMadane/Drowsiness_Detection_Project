@@ -77,3 +77,9 @@ total result in a table
 
 ## Contributing
 BEN MADANE khadija & EL BARKI Basma
+
+We welcome contributions! Please feel free to submit issues or pull requests. If you have any questions or need support, feel free to reach out. We welcome any contributions that enhance the project's scope and impact.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
