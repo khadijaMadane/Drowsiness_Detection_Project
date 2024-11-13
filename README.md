@@ -70,8 +70,9 @@ For the development of this project, we used the Drowsiness Dataset provided by 
 - **Varying View Directions**: The images present drivers from different angles, improving the model's ability to detect signs of drowsiness regardless of camera angle.
 
 ## Result
-![result](Image/Matrice_de_Confusion.png)
-![result](Image/resultat.png)
+
+<img src="Image/Matrice_de_Confusion.png" width="500"/>
+<img src="Image/resultat.png" width="500"/>
 
 ## Contributing
 BEN MADANE khadija & EL BARKI Basma
