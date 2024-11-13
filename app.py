@@ -79,9 +79,9 @@ def start_detection():
 
         for (ex, ey, ew, eh) in eyes:
             eye = frame[ey:ey+eh, ex:ex+ew]
-            eye = cv2.resize(eye, (80, 80))
+            eye = cv2.resize(eye, (146, 146))
             eye = eye / 255
-            eye = eye.reshape(80, 80, 3)
+            eye = eye.reshape(146, 146, 3)
             eye = np.expand_dims(eye, axis=0)
 
             prediction = model.predict(eye)
