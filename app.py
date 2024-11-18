@@ -7,15 +7,12 @@ class State:
 
 
 def main():
-    # Conteneur principal avec disposition en ligne
     col1, col2, col3 = st.columns([2, 1, 3])
 
-    # Colonne pour l'image
     with col1:
         st.image("sol-removebg-preview.png", width=400, caption="")
     with col2:
         st.empty()
-    # Colonne pour l'interface utilisateur principale
     with col3:
         st.title("Détection de Somnolence en Temps Réel")
         st.write("Bienvenue dans l'application de détection de somnolence en temps réel.")
@@ -23,7 +20,6 @@ def main():
 
         # Bouton pour démarrer la détection
         if st.button("Démarrer la détection"):
-            # Changer l'état de l'application
             st.session_state.state = State.START_DETECTION
 
 
@@ -43,22 +39,17 @@ def start_detection():
     # Configuration de la capture vidéo
     cap = cv2.VideoCapture(0)
 
-    # Initialisation des variables
     Score = 0
     alert_displayed = False
-
-    # Charger le son de l'alarme
     pygame.mixer.init()
     alarm_sound = pygame.mixer.Sound('Réveillez.ogg')
 
-    # Placeholder pour l'image finale
     output_frame = st.empty()
 
     # Add video stream to the sidebar
     video_placeholder = st.sidebar.empty()
     video_placeholder.image([], channels='BGR', use_column_width=True)
 
-    # Add buttons to the sidebar
     with st.sidebar:
         st.markdown('## Controls')
         start_button = st.button('Démarrer', key='start_button', help='Cliquer pour démarrer la détection')
@@ -92,7 +83,6 @@ def start_detection():
                 Score += 1
                 if Score > 15 and not alert_displayed:
                     st.warning("Les yeux sont fermés !")
-                    # Jouer l'alarme
                     if not pygame.mixer.get_busy():
                         alarm_sound.play()
                     alert_displayed = True
@@ -105,11 +95,9 @@ def start_detection():
                     Score = 0
                 if alert_displayed:
                     st.warning("")
-                    # Arrêter l'alarme
                     alarm_sound.stop()
                     alert_displayed = False
 
-        # Mettre à jour l'image de sortie avec le frame traité
         output_frame.image(frame, channels='BGR', use_column_width=True)
 
         if stop_button:
