@@ -72,7 +72,7 @@ For the development of this project, we used the Drowsiness Dataset provided by 
 ## Result
 
 <img src="Image/Matrice_de_Confusion.png" width="500"/>
-<img src="Image/resultat.png" width="500"/>
+<img src="Image/acc.png" width="500"/>
 
 ## Contributing
 BEN MADANE khadija & EL BARKI Basma
